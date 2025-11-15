@@ -482,10 +482,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **DxMian Dev (dxmian dev)**
 
-- 🌐 Portfolio: [Your Portfolio URL](https://yourportfolio.com)
+- 🌐 Website: [Your Portfolio URL](https://yourportfolio.com)
 - 💼 LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- 🐙 GitHub: [@yourusername](https://github.com/yourusername)
-- 📧 Email: your.email@example.com
+- 🐙 GitHub: [@Web-Whiz1](https://github.com/Web-Whiz1)
+- 📧 Email: dxmian.dev@gmail.com
 
 ---
 
@@ -557,4 +557,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 [⬆ Back to Top](#-dxmian---business-management-saas-platform)
 
 </div>
+
 
