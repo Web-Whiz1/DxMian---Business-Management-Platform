@@ -140,16 +140,6 @@
 ### Live Demo
 🔗 [View Live Demo](https://your-demo-link.com) *(Add your deployed link here)*
 
-### Screenshots
-*(Add screenshots of your application here)*
-
-```
-📸 Screenshot 1: Dashboard Overview
-📸 Screenshot 2: Booking Management
-📸 Screenshot 3: Customer Management
-📸 Screenshot 4: Analytics Dashboard
-```
-
 ---
 
 ## 🚀 Getting Started
@@ -567,3 +557,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 [⬆ Back to Top](#-dxmian---business-management-saas-platform)
 
 </div>
+
