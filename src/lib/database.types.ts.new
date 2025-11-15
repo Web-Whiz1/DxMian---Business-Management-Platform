@@ -1,0 +1,74 @@
+export type Json =
+  | string
+  | number
+  | boolean
+  | null
+  | { [key: string]: Json | undefined }
+  | Json[]
+
+export type BookingStatus = 'PENDING' | 'CONFIRMED' | 'COMPLETED' | 'CANCELLED' | 'NO_SHOW';
+export type UserRole = 'BUSINESS_OWNER' | 'STAFF' | 'CUSTOMER';
+export type BusinessType = 'RESTAURANT' | 'GYM' | 'SALON' | 'SPA' | 'CLINIC' | 'OTHER';
+
+export type Database = {
+  __InternalSupabase: {
+    PostgrestVersion: "13.0.5"
+  }
+  public: {
+    Tables: {
+      booking_settings: {
+        Row: {
+          buffer_time_minutes: number | null
+          business_id: string
+          created_at: string | null
+          id: string
+          max_booking_window_days: number | null
+          min_notice_hours: number | null
+          requires_card_hold: boolean | null
+          send_reminders: boolean | null
+          updated_at: string | null
+        }
+        Insert: {
+          buffer_time_minutes?: number | null
+          business_id: string
+          created_at?: string | null
+          id?: string
+          max_booking_window_days?: number | null
+          min_notice_hours?: number | null
+          requires_card_hold?: boolean | null
+          send_reminders?: boolean | null
+          updated_at?: string | null
+        }
+        Update: {
+          buffer_time_minutes?: number | null
+          business_id?: string
+          created_at?: string | null
+          id?: string
+          max_booking_window_days?: number | null
+          min_notice_hours?: number | null
+          requires_card_hold?: boolean | null
+          send_reminders?: boolean | null
+          updated_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "booking_settings_business_id_fkey"
+            columns: ["business_id"]
+            isOneToOne: true
+            referencedRelation: "businesses"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
+      // ... rest of Database type ...
+    }
+  }
+}
+
+// Our custom type definitions
+type DBTables = Database['public']['Tables']
+
+export type UserUpdate = Partial<Omit<DBTables['users']['Row'], 'id' | 'created_at' | 'updated_at' | 'password_hash' | 'reset_token' | 'reset_token_expires'>>;
+export type Booking = DBTables['bookings']['Row'];
+export type Customer = Omit<DBTables['customers']['Row'], 'total_spent'> & { total_spent: number };
+export type Service = Omit<DBTables['services']['Row'], 'is_active'> & { is_active: boolean };
